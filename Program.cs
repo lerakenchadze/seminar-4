@@ -69,3 +69,47 @@
 
 
 
+// Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке
+
+// int[] Array()
+// {
+//     int [] arr = new int [8];
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         arr[i] = new Random().Next(0,2);
+//     }
+//     return arr;
+// }
+// void ShowArray (int[] arr)
+// {
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         Console.Write($"{arr[i]} ");
+//     }
+// }
+
+
+// ShowArray(Array());
+
+// Напишите программу, которая выводит массив из количества элементов, заданные пользователем, заполненный числами от 5 до 15 в случайном порядке
+
+int[] Array(int N)
+{
+    int [] arr = new int [N];
+    for (int i = 0; i < N; i++)
+    {
+        arr[i] = new Random().Next(5,16);
+    }
+    return arr;
+}
+void ShowArray (int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write($"{arr[i]} ");
+    }
+}
+
+Console.Write("Write your length: ");
+int lengthMass = Convert.ToInt32(Console.ReadLine());
+ShowArray(Array(lengthMass));
